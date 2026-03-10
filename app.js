@@ -1,4 +1,3 @@
-
 import { supabase } from './supabaseClient.js'
 
 // Recupera o usuÃ¡rio logado. Redireciona para login se nÃ£o estiver autenticado.
@@ -37,7 +36,7 @@ window.adicionarItem = async function () {
 
   const { error } = await supabase.from('lista_compras').insert({
     item: input.value,
-    adicionada_por: user.id // Certifique-se que a coluna existe e Ã© do tipo uuid
+    adicionado_por: user.id // Certifique-se que a coluna existe e Ã© do tipo uuid
   })
 
   if (error) return alert('Erro ao adicionar: ' + error.message)
