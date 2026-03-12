@@ -54,7 +54,11 @@ body {
     font-weight: 500;
 }
 
+
 input {
+    width: 100%;
+    padding: 14%;
+    margin: 10px 0;
     border: 1px solid var(--cor-preto);
     border-radius: var(--raio);
     font-size: 1rem;
