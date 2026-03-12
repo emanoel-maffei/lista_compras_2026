@@ -57,7 +57,7 @@ body {
 
 input {
     width: 100%;
-    padding: 14px;
+    padding: 0;
     margin: 10px 0;
     border: 1px solid var(--cor-preto);
     border-radius: var(--raio);
@@ -69,4 +69,38 @@ input:focus {
     border-color: var(--cor-primaria-1);
     outline: none;
     box-shadow: 0 0 0 3px var(--cor-primaria-1);
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: var(--raio);
+    background-color: var(--cor-primaria-1);
+    color: var(--cor-branco);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    input, button {
+        font-size: 0.95rem;
+    }
 }
