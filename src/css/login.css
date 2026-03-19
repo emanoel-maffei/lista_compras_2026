@@ -94,7 +94,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--cor-primaria-2);
+    background-color: var(--cor-branco);
     color: var(--cor-preto);
 }
 
