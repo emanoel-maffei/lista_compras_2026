@@ -122,3 +122,25 @@ button[onclick="logout()"]:hover {
     font-size: 1rem;
     transition: var(--transition);
 }
+
+#item:focus {
+    border: 1px solid var(--cor-texto);
+    outline: none;
+    box-shadow: 0 2px 6px var(--cor-texto);
+}
+
+button[onclick="adicionarItem()"] {
+    padding: 12px 20px;
+    background-color: var(--cor-primaria-1);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: var(--raio);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+button[onclick="adicionarItem()"]:hover {
+    background-color: var(--cor-primaria-2);
+}
