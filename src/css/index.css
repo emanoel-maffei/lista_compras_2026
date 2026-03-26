@@ -102,5 +102,23 @@ button[onclick="logout()"]:hover {
 }
 
 #lista button {
-    
+    background-color: #fff;
+    color: var(--cor-texto);
+    border: none;
+    border-radius: var(--raio);
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+#item {
+    width: 100%;
+    min-width: 400px;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid var(--cor-texto);
+    border-radius: var(--raio);
+    font-size: 1rem;
+    transition: var(--transition);
 }
