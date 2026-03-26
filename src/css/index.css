@@ -84,7 +84,7 @@ button[onclick="logout()"]:hover {
 
 #lista {
     width: 100%;
-    min-width: 600px;
+    /* min-width: 600px; */
     list-style: none; 
     margin-bottom: 32px;
     padding: 0;
@@ -98,7 +98,7 @@ button[onclick="logout()"]:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 6px var(--cor-texto);
+    box-shadow: 0 2px 16px var(--cor-texto);
 }
 
 #lista button {
@@ -114,7 +114,7 @@ button[onclick="logout()"]:hover {
 
 #item {
     width: 100%;
-    min-width: 400px;
+    /* min-width: 400px; */
     padding: 14px;
     margin-bottom: 12px;
     border: 1px solid var(--cor-texto);
