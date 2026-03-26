@@ -122,12 +122,17 @@ button[onclick="logout()"]:hover {
     border-radius: var(--raio);
     font-size: 1rem;
     transition: var(--transition);
+    box-shadow: 2px 2px 0px var(--cor-texto);
 }
 
 #item:focus {
     border: 1px solid var(--cor-texto);
     outline: none;
     box-shadow: 0 2px 6px var(--cor-texto);
+}
+
+#lista li:hover, #item:hover {
+    box-shadow: 1px 1px 0px var(--cor-texto);
 }
 
 button[onclick="adicionarItem()"] {
