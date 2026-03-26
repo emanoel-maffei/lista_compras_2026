@@ -98,7 +98,7 @@ button[onclick="logout()"]:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 16px var(--cor-texto);
+    /* box-shadow: 0 2px 16px var(--cor-texto); */
 }
 
 #lista button {
@@ -121,6 +121,7 @@ button[onclick="logout()"]:hover {
     border-radius: var(--raio);
     font-size: 1rem;
     transition: var(--transition);
+    margin-block: 8px;
 }
 
 #item:focus {
