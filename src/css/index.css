@@ -136,7 +136,7 @@ button[onclick="logout()"]:hover {
     transition: var(--transition);
 }
 
-#lista li, #lista button, #item {
+#lista li:hover, #lista button:hover, #item:hover {
     box-shadow: 4px 4px 0px var(--cor-texto);
 }
 
