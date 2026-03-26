@@ -131,8 +131,12 @@ button[onclick="logout()"]:hover {
     box-shadow: 0 2px 6px var(--cor-texto);
 }
 
+#lista li, #item {
+    transition: var(--transition);
+}
+
 #lista li:hover, #item:hover {
-    box-shadow: 1px 1px 0px var(--cor-texto);
+    box-shadow: 4px 4px 0px var(--cor-texto);
 }
 
 button[onclick="adicionarItem()"] {
