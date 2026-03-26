@@ -98,7 +98,7 @@ button[onclick="logout()"]:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* box-shadow: 0 2px 16px var(--cor-texto); */
+    box-shadow: 2px 2px 0px var(--cor-texto);
     margin-block: 8px;
 }
 
