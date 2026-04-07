@@ -39,7 +39,7 @@ body {
 }
 
 .container {
-    background-color: var(--cor-branco);
+    background-color: var(--cor-bg);
     padding: clamp(2rem, 5vh, 3rem);
     border-radius: var(--raio);
     box-shadow: 0 8px 24px var(--sombra);
