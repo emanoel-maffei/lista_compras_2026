@@ -155,7 +155,7 @@ button[onclick="logout()"]:hover {
     box-shadow: 4px 4px 0px var(--cor-texto);
 }
 
-#lista li:active, #lista button:focus, #item:active, .container > button:active {
+#lista li:active, #lista button:active, #item:active, .container > button:active {
     transform: translate(2px, 2px);
     border: 1px solid var(--cor-texto);
     box-shadow: none;
