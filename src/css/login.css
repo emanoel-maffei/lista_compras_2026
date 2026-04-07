@@ -103,7 +103,7 @@ button {
 }
 
 button:hover {
-    transform: translate(-2px -2px);
+    transform: translate(-2px, -2px);
     box-shadow: 4px 4px 0px var(--cor-texto);
 }
 
