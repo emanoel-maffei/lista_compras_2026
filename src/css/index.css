@@ -98,7 +98,6 @@ button[onclick="logout()"]:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 2px 2px 0px var(--cor-texto);
     margin-block: 8px;
 }
 
@@ -111,7 +110,6 @@ button[onclick="logout()"]:hover {
     cursor: pointer;
     font-size: 0.9rem;
     transition: var(--transition);
-    box-shadow: 2px 2px 0px var(--cor-texto);
 }
 
 #item {
@@ -129,11 +127,12 @@ button[onclick="logout()"]:hover {
 #item:focus {
     border: 1px solid var(--cor-texto);
     outline: none;
-    box-shadow: 0 2px 6px var(--cor-texto);
+    box-shadow: 0 2px 0px var(--cor-texto);
 }
 
-#lista li, #lista button, #item {
+#lista li, #lista button, #item, .container > button {
     transition: var(--transition);
+    box-shadow: 2px 2px 0px var(--cor-texto);
 }
 
 .container > button {
@@ -149,8 +148,7 @@ button[onclick="logout()"]:hover {
 }
 
 
-
-#lista li:hover, button:hover, #item:hover {
+#lista li:hover, #lista button:hover, #item:hover, .container > button:hover {
     box-shadow: 4px 4px 0px var(--cor-texto);
 }
 
