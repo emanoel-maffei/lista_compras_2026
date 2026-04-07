@@ -150,12 +150,12 @@ button[onclick="logout()"]:hover {
 }
 
 
-#lista li:not(:focus):hover, #lista button:not(:focus):hover, #item:not(:focus):hover, .container > button:not(:focus):hover {
+#lista li:not(:active):hover, #lista button:not(:active):hover, #item:not(:focus):hover, .container > button:not(:active):hover {
     transform: translate(-2px, -2px);
     box-shadow: 4px 4px 0px var(--cor-texto);
 }
 
-#lista li:focus, #lista button:focus, #item:focus, .container > button:focus {
+#lista li:active, #lista button:focus, #item:active, .container > button:active {
     transform: translate(2px, 2px);
     border: 1px solid var(--cor-texto);
     box-shadow: none;
