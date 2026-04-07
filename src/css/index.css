@@ -26,6 +26,7 @@
 }
 
 body {
+    font-weight: bold;
     font-family: var(--fonte);
     background: linear-gradient(135deg,rgba(164, 121, 99, 1) 0%, rgba(61, 46, 32, 1) 100%);
 
@@ -103,7 +104,6 @@ button[onclick="logout()"]:hover {
 }
 
 #lista button {
-    font-weight: bold;
     background-color: #fff;
     color: var(--cor-texto);
     border: none;
