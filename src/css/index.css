@@ -126,6 +126,7 @@ button[onclick="logout()"]:hover {
 }
 
 #item:focus {
+    transform: translate(2px, 2px);
     border: 1px solid var(--cor-texto);
     box-shadow: none;
     outline: none;
