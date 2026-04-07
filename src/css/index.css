@@ -103,8 +103,8 @@ button[onclick="logout()"]:hover {
 }
 
 #lista button {
-    background-color: var(--cor-preto);
-    color: var(--cor-branco);
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
     border: none;
     border-radius: var(--raio);
     padding: 6px 12px;
