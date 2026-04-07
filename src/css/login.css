@@ -16,7 +16,7 @@
     --fonte: Poppins, Arial, Helvetica, sans-serif;
 
     --raio: 12px;
-    --transition: 0.3s ease;
+    --transition: 0.15s ease;
 }
 
 * {
@@ -97,13 +97,16 @@ button {
     border-radius: var(--raio);
     background-color: var(--cor-primaria-1);
     color: var(--cor-branco);
+    box-shadow: 2px 2px 0px var(--cor-texto);
     cursor: pointer;
     transition: var(--transition);
 }
 
 button:hover {
+    transform: translate(-2px -2px);
     background-color: var(--cor-branco);
     color: var(--cor-preto);
+    box-shadow: 2px 2px 0px var(--cor-texto);
 }
 
 @media (max-width: 360px) {
