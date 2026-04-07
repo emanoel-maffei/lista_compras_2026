@@ -152,7 +152,3 @@ button[onclick="logout()"]:hover {
     transform: translate(-2px, -2px);
     box-shadow: 4px 4px 0px var(--cor-texto);
 }
-
-.container > button:hover {
-    background-color: var(--cor-primaria-2);
-}
