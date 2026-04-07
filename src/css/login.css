@@ -104,9 +104,7 @@ button {
 
 button:hover {
     transform: translate(-2px -2px);
-    background-color: var(--cor-branco);
-    color: var(--cor-preto);
-    box-shadow: 2px 2px 0px var(--cor-texto);
+    box-shadow: 4px 4px 0px var(--cor-texto);
 }
 
 @media (max-width: 360px) {
