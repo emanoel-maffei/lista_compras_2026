@@ -149,6 +149,7 @@ button[onclick="logout()"]:hover {
 
 
 #lista li:hover, #lista button:hover, #item:hover, .container > button:hover {
+    transform: translate(-2px, -2px);
     box-shadow: 4px 4px 0px var(--cor-texto);
 }
 
