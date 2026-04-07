@@ -136,10 +136,6 @@ button[onclick="logout()"]:hover {
     transition: var(--transition);
 }
 
-#lista li:hover, #lista button:hover, #item:hover {
-    box-shadow: 4px 4px 0px var(--cor-texto);
-}
-
 .container > button {
     padding: 12px 20px;
     background-color: var(--cor-primaria-1);
@@ -150,6 +146,12 @@ button[onclick="logout()"]:hover {
     font-size: 1rem;
     font-weight: 500;
     transition: var(--transition);
+}
+
+
+
+#lista li:hover, button:hover, #item:hover {
+    box-shadow: 4px 4px 0px var(--cor-texto);
 }
 
 .container > button:hover {
