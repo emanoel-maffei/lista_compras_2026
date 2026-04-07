@@ -16,7 +16,7 @@
     --fonte: Poppins, Arial, Helvetica, sans-serif;
 
     --raio: 12px;
-    --transition: 0.3s ease;
+    --transition: 0.15s ease;
 }
 
 * {
@@ -29,7 +29,7 @@ body {
     font-family: var(--fonte);
     background: linear-gradient(135deg,rgba(164, 121, 99, 1) 0%, rgba(61, 46, 32, 1) 100%);
 
-    display: flex;
+    display: flex;var(--cor-texto)
     justify-content: center;
     align-items: center;
     
@@ -102,6 +102,7 @@ button[onclick="logout()"]:hover {
 }
 
 #lista button {
+    font-weight: bold;
     background-color: #fff;
     color: var(--cor-texto);
     border: none;
@@ -127,12 +128,6 @@ button[onclick="logout()"]:hover {
 #item:focus {
     border: 1px solid var(--cor-texto);
     outline: none;
-    box-shadow: 0 2px 0px var(--cor-texto);
-}
-
-#lista li, #lista button, #item, .container > button {
-    transition: var(--transition);
-    box-shadow: 2px 2px 0px var(--cor-texto);
 }
 
 .container > button {
@@ -144,11 +139,15 @@ button[onclick="logout()"]:hover {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 500;
+
+
+#lista li, #lista button, #item, .container > button {
     transition: var(--transition);
-}
+    box-shadow: 2px 2px 0px var(--cor-texto);
+}}
 
 
-#lista li:hover, #lista button:hover, #item:hover, .container > button:hover {
+#lista li:hover, #lista button:hover, #item:not(:focus):hover, .container > button:hover {
     transform: translate(-2px, -2px);
     box-shadow: 4px 4px 0px var(--cor-texto);
 }
