@@ -140,7 +140,7 @@ button[onclick="logout()"]:hover {
     box-shadow: 4px 4px 0px var(--cor-texto);
 }
 
-button[onclick="adicionarItem()"] {
+.container > button {
     padding: 12px 20px;
     background-color: var(--cor-primaria-1);
     color: var(--cor-branco);
@@ -152,6 +152,6 @@ button[onclick="adicionarItem()"] {
     transition: var(--transition);
 }
 
-button[onclick="adicionarItem()"]:hover {
+.container > button:hover {
     background-color: var(--cor-primaria-2);
 }
