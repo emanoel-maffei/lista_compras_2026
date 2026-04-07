@@ -26,7 +26,6 @@
 }
 
 body {
-    font-weight: bold;
     font-family: var(--fonte);
     background: linear-gradient(135deg,rgba(164, 121, 99, 1) 0%, rgba(61, 46, 32, 1) 100%);
 
@@ -140,12 +139,13 @@ button[onclick="logout()"]:hover {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 500;
+}
 
 
 #lista li, #lista button, #item, .container > button {
     transition: var(--transition);
     box-shadow: 2px 2px 0px var(--cor-texto);
-}}
+}
 
 
 #lista li:hover, #lista button:hover, #item:not(:focus):hover, .container > button:hover {
