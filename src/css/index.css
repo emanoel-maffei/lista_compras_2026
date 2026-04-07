@@ -29,7 +29,8 @@ body {
     font-family: var(--fonte);
     background: linear-gradient(135deg,rgba(164, 121, 99, 1) 0%, rgba(61, 46, 32, 1) 100%);
 
-    display: flex;var(--cor-texto)
+    display: flex;
+    color: var(--cor-texto);
     justify-content: center;
     align-items: center;
     
