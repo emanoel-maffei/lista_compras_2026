@@ -25,6 +25,11 @@
     margin: 0;
 }
 
+*::selection {
+    background-color: var(--cor-primaria-4);
+    background-color: var(--cor-primaria-1);
+}
+
 body {
     font-family: var(--fonte);
     background: linear-gradient(135deg,rgba(164, 121, 99, 1) 0%, rgba(61, 46, 32, 1) 100%);
