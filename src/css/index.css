@@ -140,6 +140,7 @@ button[onclick="logout()"]:hover {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 500;
+    margin: 0px 8px;
 }
 
 
