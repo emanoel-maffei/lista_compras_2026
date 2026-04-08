@@ -27,7 +27,7 @@
 
 *::selection {
     background-color: var(--cor-primaria-4);
-    background-color: var(--cor-bg);
+    color: var(--cor-bg);
 }
 
 body {
