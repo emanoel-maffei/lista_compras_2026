@@ -33,6 +33,8 @@
 body {
     font-family: var(--fonte);
     background: linear-gradient(135deg,rgba(164, 121, 99, 1) 0%, rgba(61, 46, 32, 1) 100%);
+    background-size: 500%;
+    background-position: 0 0;
 
     display: flex;
     color: var(--cor-texto);
@@ -41,6 +43,22 @@ body {
     
     min-height: 100vh;
     padding: 20px;
+
+    animation-name: background-move;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes background-move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 100%;
+    }
 }
 
 .container {
