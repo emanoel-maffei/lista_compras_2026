@@ -5,7 +5,7 @@
     --cor-primaria-1: #A47963;
     --cor-primaria-2: #75574c;
     --cor-primaria-3: #3D2E20;
-    --cor-primaria-4: #3b2513;
+    --cor-primaria-4: #502b18;
     --cor-bg: #FFF5E9;
 
     --cor-branco: #FFFFFF;
@@ -63,6 +63,7 @@ body {
 
 .container {
     background-color: var(--cor-bg);
+    backdrop-filter: blur(15px);
     padding: clamp(2rem, 5vh, 3rem);
     border-radius: var(--raio);
     box-shadow: 0 8px 24px var(--sombra);
