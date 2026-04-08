@@ -16,7 +16,7 @@
     --fonte: Poppins, Arial, Helvetica, sans-serif;
 
     --raio: 12px;
-    --transition: 0.15s ease;
+    --transition: 0.1s ease;
 }
 
 * {
@@ -73,13 +73,24 @@ input {
     border: 1px solid var(--cor-preto);
     border-radius: var(--raio);
     font-size: 1rem;
+    box-shadow: 2px 2px 0px var(--cor-preto);
     transition: var(--transition);
+    outline: none;
 }
 
-input:focus {
+/* input:focus {
     border-color: var(--cor-primaria-1);
     outline: none;
     box-shadow: 0 0 0 3px var(--cor-primaria-1);
+} */
+
+input:not(:focus):hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--cor-preto);
+}
+
+input:focus {
+    box-shadow: 0px 0px 0px var(--cor-preto);
 }
 
 .botoes {
@@ -93,7 +104,7 @@ button {
     padding: 12px;
     font-size: 1rem;
     font-weight: 500;
-    border: none;
+    border: solid 1px var(--cor-preto);
     border-radius: var(--raio);
     background-color: var(--cor-primaria-1);
     color: var(--cor-branco);
