@@ -105,7 +105,7 @@ button[onclick="logout()"]:hover {
 #lista button {
     background-color: var(--cor-branco);
     color: var(--cor-preto);
-    border: none;
+    border: solid 1px var(--cor-preto);
     border-radius: var(--raio);
     padding: 6px 12px;
     cursor: pointer;
@@ -127,7 +127,6 @@ button[onclick="logout()"]:hover {
 
 #item:focus {
     transform: translate(2px, 2px);
-    border: 1px solid var(--cor-texto);
     box-shadow: none;
     outline: none;
 }
