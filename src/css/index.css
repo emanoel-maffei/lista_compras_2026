@@ -188,6 +188,10 @@ button {
     outline: none;
 }
 
+#item, button {
+    outline: solid 0px var(--cor-primaria-4);
+}
+
 #item:focus, button:focus {
-    outline: solid var(--cor-primaria-4);
+    outline: solid 3px var(--cor-primaria-4);
 }
