@@ -13,7 +13,7 @@
     --sombra: rgba(0, 0, 0, 0.15);
     --cor-texto: #333;
     
-    --fonte: Poppins, Arial, Helvetica, sans-serif;
+    --fonte: 'Poppins', Arial, Helvetica, sans-serif;
 
     --raio: 12px;
     --transition: 0.1s ease;
