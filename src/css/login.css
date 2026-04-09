@@ -3,9 +3,9 @@
 
 :root {
     --cor-primaria-1: #A47963;
-    --cor-primaria-2: #936860;
+    --cor-primaria-2: #75574c;
     --cor-primaria-3: #3D2E20;
-    --cor-primaria-4: #2C220E;
+    --cor-primaria-4: #502b18;
     --cor-bg: #FFF5E9;
 
     --cor-branco: #FFF5E9;
@@ -122,6 +122,14 @@ button:hover {
 button:active {
     box-shadow: none;
     transform: translate(2px, 2px);
+}
+
+input, button {
+    outline: solid 0px var(--cor-primaria-4);
+}
+
+input:focus, button:focus {
+    outline: solid 2px var(--cor-primaria-4);
 }
 
 @media (max-width: 360px) {
