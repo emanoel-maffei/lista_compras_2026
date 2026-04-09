@@ -119,6 +119,11 @@ button:hover {
     box-shadow: 4px 4px 0px var(--cor-texto);
 }
 
+button:active {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
 @media (max-width: 360px) {
     .container {
         padding: 1.5rem;
