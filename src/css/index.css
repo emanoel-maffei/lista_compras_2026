@@ -170,7 +170,6 @@ button {
     user-select: none;
 }
 
-
 #lista li, #lista button, #item, .container > button {
     transition: var(--transition);
     box-shadow: 2px 2px 0px var(--cor-texto);
@@ -187,4 +186,8 @@ button {
     border: 1px solid var(--cor-texto);
     box-shadow: none;
     outline: none;
+}
+
+#item:focus, button:focus {
+    outline: solid var(--cor-primaria-4);
 }
