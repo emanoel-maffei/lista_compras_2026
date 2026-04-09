@@ -30,6 +30,11 @@ async function carregarLista() {
 
 // Adiciona novo item Ã  lista de compras
 window.adicionarItem = async function () {
+  if (!input.value) { 
+    input.value = "";
+    return
+  }
+
   const user = await getUser()
   console.log('UsuÃ¡rio:', user)
   console.log('Item:', input.value)
@@ -65,6 +70,6 @@ getUser().then(carregarLista)
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Enter') {
       adicionarItem()
- }
+  }
 })
     
