@@ -4,8 +4,8 @@
     "description": "Aplicativo de lista de compras",
     "start_url": "/",
     "display": "standalone",
-    "background-color": "#FFFFFF",
-    "theme_color": "#",
+    "background-color": "#FFF5E9",
+    "theme_color": "#A47963",
     "icons": [
         {
             "src": "src/icons/icon-72x72.png",
