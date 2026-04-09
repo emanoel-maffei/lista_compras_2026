@@ -75,7 +75,6 @@ input {
     font-size: 1rem;
     box-shadow: 2px 2px 0px var(--cor-preto);
     transition: var(--transition);
-    outline: none;
 }
 
 /* input:focus {
