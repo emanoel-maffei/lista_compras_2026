@@ -5,7 +5,7 @@ const urlsToCache = [
   '/login.html',
   '/src/css/login.css',
   '/index.html',
-  'src/css/index.css',
+  '/src/css/index.css',
   '/app.js',
   '/manifest.json',
   '/src/icons/icon-72x72.png',
