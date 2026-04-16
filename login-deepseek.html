@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Bem-vindo · Lista Compartilhada</title>
+    <link rel="stylesheet" href="src/css/login-deepseek.css">
+    <link rel="shortcut icon" href="src/icons/favicon.ico" type="image/x-icon">
+    <!-- Fonte Poppins já importada no CSS -->
+</head>
+<body>
+
+    <!-- Container Principal com Glassmorphism + Neubrutalism -->
+    <main class="auth-container">
+        <div class="logo-wrapper">
+            <img id="logo" src="src/icons/icon-512x110.png" alt="Logo da Lista de Compras">
+        </div>
+
+        <!-- Segmented Control (Abas) -->
+        <div class="auth-tabs" role="tablist">
+            <button id="tab-login" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-login">Entrar</button>
+            <button id="tab-signup" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-signup">Cadastrar</button>
+        </div>
+
+        <!-- Painel de LOGIN -->
+        <div id="panel-login" class="auth-panel active" role="tabpanel" aria-labelledby="tab-login">
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="email" id="login-email" name="email" placeholder=" " autocomplete="email" required>
+                    <label for="login-email">E-mail</label>
+                    <span class="input-icon">✉️</span>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="login-senha" name="senha" placeholder=" " autocomplete="current-password" required>
+                    <label for="login-senha">Senha</label>
+                    <button type="button" class="toggle-password" aria-label="Mostrar senha" data-target="login-senha">👁️</button>
+                </div>
+
+                <button type="submit" class="auth-action-btn">
+                    <span>Acessar Lista</span>
+                    <span class="arrow-icon">→</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Painel de CADASTRO -->
+        <div id="panel-signup" class="auth-panel" role="tabpanel" aria-labelledby="tab-signup" hidden>
+            <form id="signup-form">
+                <div class="input-group">
+                    <input type="email" id="signup-email" name="email" placeholder=" " autocomplete="email" required>
+                    <label for="signup-email">E-mail</label>
+                    <span class="input-icon">✉️</span>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="signup-senha" name="senha" placeholder=" " autocomplete="new-password" required minlength="6">
+                    <label for="signup-senha">Senha</label>
+                    <button type="button" class="toggle-password" aria-label="Mostrar senha" data-target="signup-senha">👁️</button>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="signup-confirmar" name="confirmar" placeholder=" " autocomplete="off" required>
+                    <label for="signup-confirmar">Confirmar Senha</label>
+                    <span class="input-icon">🔒</span>
+                </div>
+
+                <button type="submit" class="auth-action-btn">
+                    <span>Criar Conta</span>
+                    <span class="arrow-icon">→</span>
+                </button>
+            </form>
+        </div>
+
+        <div class="auth-footer">
+            <span class="status-message"></span>
+        </div>
+    </main>
+
+    <script type="module" src="auth.js"></script>
+    
+    <!-- Script para Alternar Abas e Visualizar Senha (UI Pura) -->
+    <script>
+        (function() {
+            // Alternar entre Login e Cadastro
+            const tabs = document.querySelectorAll('.tab-btn');
+            const panels = document.querySelectorAll('.auth-panel');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetPanel = tab.id === 'tab-login' ? 'panel-login' : 'panel-signup';
+                    
+                    // Atualizar estado ARIA e CSS
+                    tabs.forEach(t => {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    panels.forEach(p => {
+                        p.classList.remove('active');
+                        p.hidden = true;
+                    });
+                    
+                    tab.classList.add('active');
+                    tab.setAttribute('aria-selected', 'true');
+                    const activePanel = document.getElementById(targetPanel);
+                    activePanel.classList.add('active');
+                    activePanel.hidden = false;
+                });
+            });
+
+            // Toggle de Senha (Vanilla JS)
+            document.querySelectorAll('.toggle-password').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.dataset.target;
+                    const input = document.getElementById(targetId);
+                    const isPassword = input.type === 'password';
+                    input.type = isPassword ? 'text' : 'password';
+                    this.textContent = isPassword ? '🙈' : '👁️';
+                    this.setAttribute('aria-label', isPassword ? 'Ocultar senha' : 'Mostrar senha');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

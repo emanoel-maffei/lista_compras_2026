@@ -1,0 +1,325 @@
+/* Fonte: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Nova Paleta - Contraste Melhorado */
+    --cor-primaria-1: #A47963;
+    --cor-primaria-2: #75574c;
+    --cor-primaria-3: #3D2E20;
+    --cor-primaria-4: #2c1d12; /* Escurecido para botão primário */
+    
+    --cor-bg: #FFF5E9;
+    --cor-branco: #FFFFFF;
+    --cor-preto: #1d1d1d;
+    
+    --sombra: rgba(0, 0, 0, 0.25);
+    --sombra-suave: rgba(0, 0, 0, 0.1);
+    --cor-texto: #2a2a2a;
+    
+    --fonte: 'Poppins', Arial, Helvetica, sans-serif;
+    --raio: 16px; /* Raio maior para um toque moderno */
+    --raio-input: 12px;
+    --transition: 0.15s cubic-bezier(0.2, 0, 0, 1);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--fonte);
+    /* Background Animado Migrado do Index */
+    background: linear-gradient(135deg, var(--cor-primaria-2), var(--cor-primaria-3), var(--cor-primaria-1));
+    background-size: 400% 400%;
+    background-position: 0% 0%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+    
+    animation: bgMove 12s ease-in-out infinite alternate;
+    will-change: background-position;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Container Principal - Glass + Neubrutalism */
+.auth-container {
+    background: rgba(255, 245, 233, 0.75);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem 2rem;
+    border-radius: var(--raio);
+    
+    border: 1.5px solid var(--cor-preto);
+    box-shadow: 8px 8px 0px var(--cor-preto);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.auth-container:has(.input-group input:focus) {
+    box-shadow: 4px 4px 0px var(--cor-preto);
+    transform: translate(4px, 4px);
+}
+
+.logo-wrapper {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#logo {
+    max-width: 80%;
+    height: auto;
+    filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.1));
+}
+
+/* Segmented Control (Tabs) */
+.auth-tabs {
+    display: flex;
+    gap: 0.5rem;
+    background-color: rgba(61, 46, 32, 0.1);
+    padding: 0.35rem;
+    border-radius: 40px;
+    border: 1px solid var(--cor-preto);
+}
+
+.tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.75rem 0.5rem;
+    font-family: var(--fonte);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--cor-texto);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all var(--transition);
+    border: 1px solid transparent;
+}
+
+.tab-btn.active {
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    box-shadow: 0 2px 4px var(--sombra);
+    border: 1px solid var(--cor-preto);
+}
+
+/* Painéis */
+.auth-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.auth-panel[hidden] {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Estilização dos Campos - Floating Labels */
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1.5rem 1rem 0.75rem 2.75rem; /* Espaço para ícone e label flutuante */
+    border: 1.5px solid var(--cor-preto);
+    border-radius: var(--raio-input);
+    font-size: 1rem;
+    font-family: var(--fonte);
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    color: var(--cor-preto);
+    transition: var(--transition);
+    box-shadow: 4px 4px 0px var(--cor-preto);
+    line-height: 1.2;
+}
+
+/* Label Flutuante */
+.input-group label {
+    position: absolute;
+    left: 2.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 500;
+    color: #5a4a3e;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background: transparent;
+    padding: 0 2px;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: 0.65rem;
+    left: 2.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--cor-primaria-4);
+    background: transparent;
+    transform: translateY(0);
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Botão de Olho da Senha */
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: opacity var(--transition);
+    z-index: 3;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+.toggle-password:hover {
+    opacity: 1;
+    background-color: rgba(0,0,0,0.05);
+}
+
+/* Estados de Validação Modernos */
+.input-group input:user-valid {
+    border-color: #2e7d32;
+    box-shadow: 4px 4px 0px #1b5e20;
+}
+.input-group input:user-invalid {
+    border-color: #c62828;
+    box-shadow: 4px 4px 0px #b71c1c;
+}
+
+/* Interação Neubrutalista nos Inputs */
+.input-group input:hover:not(:focus):not(:user-invalid):not(:user-valid) {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--cor-preto);
+}
+
+.input-group input:focus {
+    outline: none;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--cor-preto);
+    background: rgba(255, 255, 255, 0.9);
+    border-color: var(--cor-primaria-4);
+}
+
+/* Botão de Ação */
+.auth-action-btn {
+    margin-top: 0.5rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--cor-primaria-4);
+    color: var(--cor-branco);
+    font-family: var(--fonte);
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 1.5px solid var(--cor-preto);
+    border-radius: var(--raio-input);
+    box-shadow: 5px 5px 0px var(--cor-preto);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: -0.01em;
+}
+
+.auth-action-btn .arrow-icon {
+    font-size: 1.4rem;
+    transition: transform 0.2s ease;
+}
+
+.auth-action-btn:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0px var(--cor-preto);
+    background-color: #1f1107;
+}
+
+.auth-action-btn:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+.auth-action-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0px var(--cor-preto);
+}
+
+.auth-footer {
+    text-align: center;
+    min-height: 24px;
+}
+
+.status-message {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--cor-texto);
+}
+
+/* Ajustes de Acessibilidade e Foco */
+button:focus-visible, input:focus-visible {
+    outline: 3px solid var(--cor-primaria-1);
+    outline-offset: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+        align-items: flex-start;
+        padding-top: 2rem;
+    }
+    
+    .auth-container {
+        padding: 1.75rem 1.25rem;
+        box-shadow: 5px 5px 0px var(--cor-preto);
+    }
+    
+    .input-group input {
+        padding-left: 2.5rem;
+    }
+    
+    .input-group label {
+        left: 2.5rem;
+    }
+}
