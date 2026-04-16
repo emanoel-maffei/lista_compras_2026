@@ -10,3 +10,5 @@ Estou trabalhando em um projeto pwa html, css e js para uma lista de compras com
 visual e experiência no site. Vamos começar pela página de login, depois partimos para o index. 
 Assuma uma persona de um engenheiro de software com especialização em design gráfico e front-end, e vamos discutir ideias de melhorias do projeto anexo. faça perguntas sempre que necessário.
 Quando codarmos retorne os arquivos em separa, html e css
+
+Obs: Passar os arquivos login.html, index.html, login.css e index.css.
