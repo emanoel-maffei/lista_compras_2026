@@ -1,0 +1,5 @@
+Crie um jogo estilo Flexbox Froggy mas ao ínves de ensinar apenas flexbox, quero que ensine diversas coisas como HTML, JS, JSX, CSS, PHP, PYTHON, JAVA  e outras linguagens.
+
+Quero que desenvolva tudo em HTML, CSS  e JS,
+
+Quero que possamos escolher qual exercitar entre os citados e outros a mais, e o que especificamente exercitar dentro do escolhido. 
